@@ -59,9 +59,9 @@ export const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
                     </p>
                     <Button
                         color="primary"
-                        variant="light"
+                        variant="bordered"
+                        className="w-full md:w-auto border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 transition-colors"
                         endContent={<Icon icon="lucide:arrow-right" />}
-                        className="w-full md:w-auto"
                         onClick={onViewDetails}
                     >
                         View Details

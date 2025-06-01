@@ -43,28 +43,53 @@ export const DATA = {
                 {
                     id: 1,
                     name: "Sarah Johnson",
-                    role: "Product Manager at TechCorp",
-                    content:
-                        "Working with this designer was an absolute pleasure. The attention to detail and innovative solutions provided exceeded our expectations.",
+                    role: "Product Manager at TechNova",
+                    content: "The design system created for our SaaS platform reduced our development time by 40% while improving consistency across all our products. The attention to accessibility standards was particularly impressive.",
                     avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=1",
                 },
                 {
                     id: 2,
                     name: "Michael Chen",
-                    role: "CEO at StartupX",
-                    content:
-                        "The combination of technical expertise and design sensibility is rare to find. Delivered an outstanding product that our users love.",
+                    role: "CTO at StartUpGrid",
+                    content: "Working with this team transformed our mobile app's user retention by 35% in just three months. Their data-driven design approach helped us identify pain points we didn't even know existed.",
                     avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=2",
                 },
                 {
                     id: 3,
-                    name: "Emily Rodriguez",
-                    role: "Creative Director at DesignLab",
-                    content:
-                        "Exceptional work ethic and creative problem-solving abilities. The final product was both beautiful and highly functional.",
+                    name: "David Rodriguez",
+                    role: "UX Director at FinTech Global",
+                    content: "The dashboard redesign resulted in a 50% reduction in support tickets. Their ability to balance complex financial data with clean visualization is unmatched in the industry.",
                     avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=3",
                 },
-            ],
+                {
+                    id: 4,
+                    name: "Priya Patel",
+                    role: "E-commerce Manager at StyleHub",
+                    content: "Our conversion rate increased by 28% after implementing their checkout flow redesign. They understood our international user base better than our internal team.",
+                    avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=4",
+                },
+                {
+                    id: 5,
+                    name: "James Wilson",
+                    role: "Head of Product at HealthTrack",
+                    content: "The healthcare app we built together received FDA approval largely due to its intuitive patient interface. Their understanding of regulatory requirements saved us months of rework.",
+                    avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=5",
+                },
+                {
+                    id: 6,
+                    name: "Lisa Nguyen",
+                    role: "Marketing Director at EduTech Solutions",
+                    content: "Our user onboarding completion rate went from 65% to 92% after their redesign. The way they simplified complex educational concepts into clear interfaces was remarkable.",
+                    avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=6",
+                },
+                {
+                    id: 7,
+                    name: "Thomas Okafor",
+                    role: "Founder at AgriTech Africa",
+                    content: "They designed an agricultural monitoring app that works perfectly even in low-connectivity rural areas. Cultural sensitivity and technical innovation in perfect balance.",
+                    avatar: "https://img.heroui.chat/image/avatar?w=100&h=100&u=7",
+                }
+            ]
         },
     },
     about: {
@@ -142,8 +167,8 @@ export const DATA = {
                     { name: "Node.js", icon: "logos:nodejs-icon" },
                     { name: "Bun", icon: "logos:bun" },
                     { name: "Python", icon: "logos:python" },
-                    { name: "MongoDB", icon: "logos:mongodb-icon" },
-                    { name: "mySQL", icon: "logos:mysql" },
+                    { name: "MySQL", icon: "logos:mysql-icon" },
+                    { name: "PostgresSQL", icon: "logos:postgresql" },
                     { name: "OpenAI", icon: "simple-icons:openai" },
                 ],
             },
@@ -180,7 +205,7 @@ export const DATA = {
             {
                 id: 1,
                 title: "Digital Banking App",
-                description: "A modern banking experience with focus on simplicity and user experience",
+                description: "A streamlined digital banking interface emphasizing clarity, speed, and intuitive design.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1",
@@ -189,9 +214,9 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=1-3",
                 ],
                 category: "Applications",
-                details: "This portfolio was crafted using modern UI/UX principles with React and TailwindCSS. It features Framer Motion for transitions, a centralized data config for easy updates, and supports mobile responsiveness with a clean layout.",
-                github: "https://github.com/elhocine-dev/portfolio",
-                live: "https://elhocine.dev",
+                details: "A feature-rich digital banking app built with React and TailwindCSS, integrating seamless animations via Framer Motion. Designed with a mobile-first approach and a modular component system powered by TypeScript and Vite.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
                     { name: "React", icon: "logos:react" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
@@ -202,7 +227,7 @@ export const DATA = {
             {
                 id: 2,
                 title: "E-commerce Platform",
-                description: "Full-featured online shopping platform with advanced filtering",
+                description: "Scalable and responsive online store with dynamic product filtering and intuitive cart management.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2",
@@ -211,19 +236,20 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=2-3",
                 ],
                 category: "Web Development",
-                details: "A web app that takes long-form articles and summarizes them using OpenAI’s GPT models. Built with React and integrated with RapidAPI for fetching articles. Features copy-to-clipboard and history tracking.",
-                github: "https://github.com/elhocine-dev/ai-blog-summarizer",
-                live: "https://aiblog.dev",
+                details: "A fully functional e-commerce platform built with React and TailwindCSS. Features product listings, advanced filters, cart and checkout system, and a modern UI with responsive design for all devices.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
                     { name: "React", icon: "logos:react" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-                    { name: "OpenAI API", icon: "simple-icons:openai" }
+                    { name: "TypeScript", icon: "logos:typescript-icon" },
+                    { name: "PostgreSQL", icon: "logos:postgresql" },
                 ],
             },
             {
                 id: 3,
                 title: "Travel Booking System",
-                description: "Seamless travel booking experience with real-time updates",
+                description: "Comprehensive booking platform for flights, hotels, and rentals with live availability.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3",
@@ -232,11 +258,11 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=3-3",
                 ],
                 category: "Web Development",
-                details: "This travel booking system was built with Next.js and heroUI. It supports flight, hotel, and rental reservations in real-time with a clean, responsive UI.",
-                github: "https://github.com/elhocine-dev/ai-blog-summarizer",
-                live: "https://aiblog.dev",
+                details: "A modern travel booking system built with Next.js and TailwindCSS. Users can search and book flights, hotels, and car rentals with real-time availability and intuitive UI components powered by HeroUI.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
-                    { name: "Next.js", icon: "logos:nextjs-icon" },
+                    { name: "Next.js", icon: "skill-icons:nextjs-dark" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
                     { name: "TypeScript", icon: "logos:typescript-icon" },
                 ],
@@ -244,7 +270,7 @@ export const DATA = {
             {
                 id: 4,
                 title: "AI Chat Assistant",
-                description: "AI-powered assistant for personalized customer support",
+                description: "Smart customer support assistant with contextual awareness and real-time replies.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4",
@@ -253,20 +279,20 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=4-3",
                 ],
                 category: "Applications",
-                details: "An AI assistant built using OpenAI API and deployed with Vercel. Features contextual memory and smart response generation with sleek UI.",
-                github: "https://github.com/elhocine-dev/ai-assistant",
-                live: "https://aichat.dev",
+                details: "AI-powered chat assistant developed with React and TailwindCSS. Integrated with OpenAI’s GPT API for contextual conversations, deployed via Vercel with real-time response and adaptive UI.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
                     { name: "React", icon: "logos:react" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
                     { name: "OpenAI API", icon: "simple-icons:openai" },
-                    { name: "Vercel", icon: "simple-icons:vercel" }
+                    { name: "Vercel", icon: "simple-icons:vercel" },
                 ],
             },
             {
                 id: 5,
                 title: "Portfolio API & CMS",
-                description: "Headless backend for portfolio websites with dynamic content management",
+                description: "Headless API backend with admin-friendly CMS capabilities.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5",
@@ -275,19 +301,19 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=5-3",
                 ],
                 category: "Backend Services",
-                details: "A RESTful API built with Node.js and Express that serves portfolio content dynamically. Features include JWT authentication, database integration (MongoDB), and a CMS-like interface for non-technical users to update their portfolio without code changes.",
-                github: "https://github.com/elhocine-dev/portfolio-backend",
+                details: "A modular REST API built with Node.js and Express, powering dynamic portfolio websites. It includes JWT-based authentication, MySQL integration, and a Swagger-documented CMS interface for easy content management by non-developers.",
+                github: "https://github.com",
                 tech: [
                     { name: "Node.js", icon: "logos:nodejs-icon" },
-                    { name: "MongoDB", icon: "logos:mongodb-icon" },
+                    { name: "MySQL", icon: "logos:mysql-icon" },
                     { name: "JWT", icon: "simple-icons:jsonwebtokens" },
-                    { name: "Swagger", icon: "simple-icons:swagger" }
+                    { name: "Swagger", icon: "simple-icons:swagger" },
                 ],
             },
             {
                 id: 6,
                 title: "Fitness Tracker App",
-                description: "Track workouts, calories, and progress in one dashboard",
+                description: "Monitor workouts, calorie intake, and goals in one place.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6",
@@ -296,19 +322,19 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=6-3",
                 ],
                 category: "Applications",
-                details: "Cross-platform fitness app with charts, goal setting, and progress tracking. Built with React Native and Tailwind for mobile UI.",
-                github: "https://github.com/elhocine-dev/fitness-tracker",
-                live: "https://fittrack.dev",
+                details: "A cross-platform fitness application developed with React Native and styled using TailwindCSS via Expo. It offers calorie tracking, workout logging, analytics via charts, and custom goal-setting—all within a mobile-optimized interface.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
                     { name: "React Native", icon: "logos:react" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-                    { name: "Expo", icon: "simple-icons:expo" }
+                    { name: "Expo", icon: "simple-icons:expo" },
                 ],
             },
             {
                 id: 7,
                 title: "Content Scheduler",
-                description: "Plan and automate your social media posts",
+                description: "Plan, schedule, and automate your social media posts effortlessly.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7",
@@ -317,19 +343,19 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=7-3",
                 ],
                 category: "Applications",
-                details: "Built for content creators, this app features calendar integration, auto-publishing, and rich preview with cloud sync support.",
-                github: "https://github.com/elhocine-dev/content-scheduler",
-                live: "https://postscheduler.dev",
+                details: "A productivity app designed for content creators featuring calendar syncing, automated post publishing, rich media previews, and cloud synchronization for seamless cross-device access.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
-                    { name: "Next.js", icon: "logos:nextjs-icon" },
-                    { name: "MongoDB", icon: "logos:mongodb-icon" },
-                    { name: "TailwindCSS", icon: "logos:tailwindcss-icon" }
+                    { name: "Next.js", icon: "skill-icons:nextjs-dark" },
+                    { name: "MySQL", icon: "logos:mysql-icon" },
+                    { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
                 ],
             },
             {
                 id: 8,
                 title: "Real Estate Dashboard",
-                description: "Manage properties, leads, and deals with ease",
+                description: "Comprehensive dashboard to manage properties, leads, and sales pipelines effectively.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8",
@@ -338,19 +364,19 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=8-3",
                 ],
                 category: "Web Development",
-                details: "Admin dashboard for real estate professionals. Includes data visualization, lead management, and CRM integrations.",
-                github: "https://github.com/elhocine-dev/real-estate-dashboard",
-                live: "https://realestatehub.dev",
+                details: "An admin panel tailored for real estate professionals featuring interactive data visualizations, lead tracking, and CRM system integrations to streamline client and property management.",
+                github: "https://github.com",
+                live: "https://example.com",
                 tech: [
                     { name: "React", icon: "logos:react" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
-                    { name: "Chart.js", icon: "simple-icons:chartdotjs" }
+                    { name: "Chart.js", icon: "simple-icons:chartdotjs" },
                 ],
             },
             {
                 id: 9,
                 title: "Crypto Wallet API",
-                description: "Backend service for secure cryptocurrency transactions and blockchain interactions",
+                description: "Robust backend API for secure cryptocurrency operations and blockchain interactions.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9",
@@ -359,20 +385,20 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=9-3",
                 ],
                 category: "Backend Services",
-                details: "A secure Node.js API for cryptocurrency transactions, supporting Ethereum and Bitcoin. Features include transaction signing, wallet address generation, and real-time blockchain event monitoring via Web3.js. Integrates with hardware security modules (HSM) for key management.",
-                github: "https://github.com/elhocine-dev/crypto-wallet-api",
+                details: "Secure Node.js API supporting Ethereum and Bitcoin transactions. Features transaction signing, wallet address creation, and real-time blockchain event monitoring using Web3.js. Enhanced with hardware security module (HSM) integration for secure key management.",
+                github: "https://github.com",
                 tech: [
                     { name: "Node.js", icon: "logos:nodejs-icon" },
                     { name: "Ethereum", icon: "logos:ethereum" },
                     { name: "Web3.js", icon: "simple-icons:web3dotjs" },
                     { name: "PostgreSQL", icon: "logos:postgresql" },
-                    { name: "JWT", icon: "simple-icons:jsonwebtokens" }
+                    { name: "JWT", icon: "simple-icons:jsonwebtokens" },
                 ],
             },
             {
                 id: 10,
                 title: "SaaS Subscription API",
-                description: "Backend service handling subscriptions, billing, and user management",
+                description: "Backend API managing SaaS subscriptions, billing, and user accounts.",
                 image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10",
                 gallery: [
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10",
@@ -381,16 +407,16 @@ export const DATA = {
                     "https://img.heroui.chat/image/dashboard?w=600&h=400&u=10-3",
                 ],
                 category: "Backend Services",
-                details: "RESTful API powering SaaS subscriptions with Stripe integration, usage metering, and tiered pricing. Features webhook processing, trial management, and analytics. Handles 10K+ concurrent users with Redis caching.",
-                github: "https://github.com/elhocine-dev/saas-subscription-api",
+                details: "RESTful API supporting SaaS subscription workflows with Stripe integration, usage metering, tiered pricing, webhook handling, trial periods, and analytics. Optimized for high concurrency with Redis caching.",
+                github: "https://github.com",
                 tech: [
                     { name: "Node.js", icon: "logos:nodejs-icon" },
                     { name: "Stripe API", icon: "logos:stripe" },
                     { name: "PostgreSQL", icon: "logos:postgresql" },
                     { name: "Redis", icon: "logos:redis" },
-                    { name: "JWT", icon: "simple-icons:jsonwebtokens" }
+                    { name: "JWT", icon: "simple-icons:jsonwebtokens" },
                 ],
-            },
+            }
         ]
     },
     contact: {

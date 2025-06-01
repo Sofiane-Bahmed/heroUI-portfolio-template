@@ -46,11 +46,16 @@ export const ProjectModal = ({ isOpen, onClose, project }) => {
                             <h4 className="font-semibold mb-6 text-foreground">
                                 Technologies Used:
                             </h4>
-                            <AvatarGroup isBordered>
+                            <AvatarGroup >
                                 {project.tech.map(({ name, icon }) => (
                                     <Avatar
                                         key={name}
                                         icon={<Icon icon={icon} width={25} />}
+                                        classNames={{
+                                            base: "bg-transparent",
+                                            icon: "text-foreground dark:text-foreground-dark"
+                                        }}
+                                        showFallback
                                     />
                                 ))}
                             </AvatarGroup>
