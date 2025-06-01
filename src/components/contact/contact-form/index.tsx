@@ -125,6 +125,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
                 <div className="flex flex-col gap-4">
                     <Button
+                        aria-label="Sending"
                         color="primary"
                         size="lg"
                         className="w-full h-14 text-base font-medium"
@@ -144,6 +145,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                     </Button>
 
                     <Button
+                        aria-label="Reset Form"
                         color="default"
                         variant="bordered"
                         size="lg"

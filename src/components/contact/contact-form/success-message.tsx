@@ -44,6 +44,7 @@ export const SuccessMessage: React.FC<{ onReset: () => void }> = ({ onReset }) =
                             transition={{ delay: 0.4, duration: 0.4 }}
                         >
                             <Button
+                              aria-label="Send another message"
                                 color="primary"
                                 variant="flat"
                                 onPress={onReset}

@@ -1,53 +1,27 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { useIsMobile } from '../../../hooks/use-mobile';
 import { Icon } from '@iconify/react';
 import { Button } from '@heroui/react';
-
-import { TestimonialCard } from "./testimonial-card";
-import { variants, dotVariants } from "./variants";
-import { DATA } from '../../../data';
 import { GradientText } from '../../textAnimations/gradient-text';
-import { useIsMobile } from '../../../hooks/use-mobile';
+
+import { TestimonialCard } from './testimonial-card';
+import { variants, dotVariants } from './variants';
+import { useTestimonials } from '../../../hooks/use-testimonials';
+import { DATA } from '../../../data/index';
 
 export const TestimonialsSection = () => {
   const { sectionTitle, sectionDescription, items } = DATA.home.testimonials;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const intervalRef = useRef<ReturnType<typeof setTimeout>>(); 
+  const {
+    currentIndex,
+    direction,
+    nextTestimonial,
+    prevTestimonial,
+    setCurrentIndex,
+    handleNavigation,
+  } = useTestimonials(items);
+  
   const isMobile = useIsMobile();
-
-  const resetAutoPlay = () => {
-    setIsAutoPlaying(true);
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(nextTestimonial, 5000);
-  };
-
-  const nextTestimonial = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % items.length);
-  };
-
-  const prevTestimonial = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
-  };
-
-  const handleNavigation = (navigate: () => void) => {
-    navigate();
-    resetAutoPlay(); 
-  };
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      intervalRef.current = setInterval(nextTestimonial, 5000);
-    }
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [isAutoPlaying, items.length]);
-
-  const currentTestimonial = items[currentIndex] || items[0]; // Fallback to first item if undefined
+  const currentTestimonial = items[currentIndex] || items[0];
 
   return (
     <section className="py-20 bg-background bg-gradient-to-b from-background to-content2">
@@ -59,13 +33,8 @@ export const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <GradientText
-            className="text-3xl md:text-4xl font-bold mb-4"
-            text={sectionTitle}
-          />
-          <p className="text-foreground-600 text-lg max-w-2xl mx-auto">
-            {sectionDescription}
-          </p>
+          <GradientText className="text-3xl md:text-4xl font-bold mb-4" text={sectionTitle} />
+          <p className="text-foreground-600 text-lg max-w-2xl mx-auto">{sectionDescription}</p>
         </motion.div>
 
         <div className="relative w-full max-w-2xl mx-auto">
@@ -102,12 +71,7 @@ export const TestimonialsSection = () => {
               animate="animate"
               exit="exit"
               variants={variants}
-              transition={{
-                type: 'spring',
-                stiffness: 200,
-                damping: 20,
-                duration: 0.5,
-              }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20, duration: 0.5 }}
               className="flex w-full flex-col items-center justify-center"
             >
               <TestimonialCard {...currentTestimonial} />
@@ -137,9 +101,8 @@ export const TestimonialsSection = () => {
                   variants={dotVariants}
                   animate={index === currentIndex ? 'active' : 'inactive'}
                   onClick={() => {
-                    setDirection(index > currentIndex ? 1 : -1);
                     setCurrentIndex(index);
-                    resetAutoPlay();
+                    handleNavigation(() => { });
                   }}
                 />
               ))}

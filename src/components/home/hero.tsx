@@ -53,6 +53,7 @@ export const HeroSection = ({
           >
             <Link href="/new CV.pdf" download aria-label="Download CV in PDF format" className="w-full sm:w-auto">
               <Button
+                aria-label="Downoald CV"
                 fullWidth
                 size="lg"
                 color="primary"
@@ -64,6 +65,7 @@ export const HeroSection = ({
             </Link>
             <Link href="/projects" className="w-full sm:w-auto">
               <Button
+                aria-label="View Projects"
                 fullWidth
                 size="lg"
                 color="primary"
