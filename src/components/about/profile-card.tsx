@@ -1,7 +1,7 @@
 import { Card, CardFooter } from "@heroui/react";
 
-import { HighlightText } from "../textAnimations/text-highlight";
-import { SplittingText } from "../textAnimations/text-splitting";
+import { HighlightText } from "../textAnimations/highlight-text";
+import { SplittingText } from "../textAnimations/splitting-text";
 import { ProfileCardProps } from "./types";
 
 export const ProfileCard = ({ image, name, title, description }: ProfileCardProps) => (

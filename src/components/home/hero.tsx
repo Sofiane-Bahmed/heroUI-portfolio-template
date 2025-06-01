@@ -1,3 +1,4 @@
+import type { PressEvent } from "@react-aria/interactions";
 import { motion } from "framer-motion";
 import { Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
@@ -16,6 +17,11 @@ export const HeroSection = ({
   title?: string;
   subtitle?: string;
 }) => {
+ 
+  const handleViewProjects = (e: PressEvent) => {
+    window.location.href = "/projects";
+  };
+
   return (
     <section className="min-h-[calc(100vh-64px)] flex items-center justify-center relative overflow-hidden bg-background">
       {showBackground && <Hole />}
@@ -63,18 +69,18 @@ export const HeroSection = ({
                 Download CV
               </Button>
             </Link>
-            <Link href="/projects" className="w-full sm:w-auto">
+            <div className="w-full sm:w-auto">
               <Button
-                aria-label="View Projects"
                 fullWidth
                 size="lg"
                 color="primary"
                 variant="bordered"
                 endContent={<Icon icon="lucide:arrow-right" />}
+                onPress={handleViewProjects}
               >
                 View Projects
               </Button>
-            </Link>
+            </div>
           </motion.div>
         </motion.div>
       </div>

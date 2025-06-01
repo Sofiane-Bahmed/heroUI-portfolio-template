@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { SplittingText } from "../../textAnimations/text-splitting";
+import { SplittingText } from "../../textAnimations/splitting-text";
 import { TimelineItemProps } from "../types";
 
 export const TimelineItem = ({
