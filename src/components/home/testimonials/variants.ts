@@ -5,6 +5,6 @@ export const variants = {
 };
 
 export const dotVariants = {
-    active: { scale: 1.2, backgroundColor: '#3f3f46' },
+    active: { scale: 1.2, backgroundColor: '#006fed' },
     inactive: { scale: 1, backgroundColor: '#D1D5DB' },
 };

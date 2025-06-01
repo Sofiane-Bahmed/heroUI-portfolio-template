@@ -2,7 +2,7 @@ import { Card, CardBody, Avatar } from '@heroui/react';
 import { Icon } from '@iconify/react';
 
 export const TestimonialCard = ({ name, role, content, avatar }) => (
-    <Card className="border-none h-full">
+    <Card className="border-none h-full bg-white/90 dark:bg-black/40">
         <CardBody className="p-6">
             <Icon icon="lucide:quote" className="w-8 h-8 text-primary-500 mb-4" />
             <p className="text-foreground-600 mb-6 italic">"{content}"</p>

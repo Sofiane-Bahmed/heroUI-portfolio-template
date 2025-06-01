@@ -23,5 +23,6 @@ export default function AboutPage() {
             <ExperienceTimeline experience={experience} />
             <Skills tech={tech} />
         </section>
+
     );
 }
