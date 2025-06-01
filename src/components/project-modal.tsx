@@ -48,15 +48,20 @@ export const ProjectModal = ({ isOpen, onClose, project }) => {
                             </h4>
                             <AvatarGroup >
                                 {project.tech.map(({ name, icon }) => (
-                                    <Avatar
+                                    <Tooltip
                                         key={name}
-                                        icon={<Icon icon={icon} width={25} />}
-                                        classNames={{
-                                            base: "bg-transparent",
-                                            icon: "text-foreground dark:text-foreground-dark"
-                                        }}
-                                        showFallback
-                                    />
+                                        content={name}
+                                        showArrow={true}>
+                                        <Avatar
+                                            key={name}
+                                            icon={<Icon icon={icon} width={25} />}
+                                            classNames={{
+                                                base: "bg-transparent",
+                                                icon: "text-foreground dark:text-foreground-dark"
+                                            }}
+                                            showFallback
+                                        />
+                                    </Tooltip>
                                 ))}
                             </AvatarGroup>
                         </div>
