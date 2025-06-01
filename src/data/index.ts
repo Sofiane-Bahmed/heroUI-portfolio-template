@@ -221,7 +221,7 @@ export const DATA = {
                     { name: "React", icon: "logos:react" },
                     { name: "TailwindCSS", icon: "logos:tailwindcss-icon" },
                     { name: "TypeScript", icon: "logos:typescript-icon" },
-                    { name: "Vite", icon: "logos:vitejs" },
+                    { name: "Expo", icon: "simple-icons:expo" },
                 ],
             },
             {

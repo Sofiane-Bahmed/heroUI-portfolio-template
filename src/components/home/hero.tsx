@@ -17,9 +17,12 @@ export const HeroSection = ({
   title?: string;
   subtitle?: string;
 }) => {
- 
-  const handleViewProjects = (e: PressEvent) => {
-    window.location.href = "/projects";
+
+  const scrollToWork = (e: PressEvent) => {
+    const workSection = document.getElementById("work-section");
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -69,18 +72,18 @@ export const HeroSection = ({
                 Download CV
               </Button>
             </Link>
-            <div className="w-full sm:w-auto">
-              <Button
-                fullWidth
-                size="lg"
-                color="primary"
-                variant="bordered"
-                endContent={<Icon icon="lucide:arrow-right" />}
-                onPress={handleViewProjects}
-              >
-                View Projects
-              </Button>
-            </div>
+            <Button
+              aria-label="View Work"
+              fullWidth
+              size="lg"
+              color="primary"
+              variant="bordered"
+              endContent={<Icon icon="lucide:arrow-down" />}
+              onPress={scrollToWork}
+              className="w-full sm:w-auto"
+            >
+              View Work
+            </Button>
           </motion.div>
         </motion.div>
       </div>
