@@ -1,12 +1,15 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { motion, AnimatePresence } from "framer-motion";
+import { Skeleton } from "@heroui/react";
 
 const ImageGallery = ({ images }) => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     const handleThumbnailClick = (index) => {
         setActiveIndex(index);
+        setImageLoaded(false);
     };
 
     return (
@@ -20,11 +23,14 @@ const ImageGallery = ({ images }) => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <img
-                        src={images[activeIndex]}
-                        alt={`Project image ${activeIndex + 1}`}
-                        className="w-full h-full object-cover"
-                    />
+                    <Skeleton isLoaded={imageLoaded} className="w-full h-full rounded-lg">
+                        <img
+                            src={images[activeIndex]}
+                            alt={`Project image ${activeIndex + 1}`}
+                            className="w-full h-full object-cover"
+                            onLoad={() => setImageLoaded(true)}
+                        />
+                    </Skeleton>
                 </motion.div>
             </AnimatePresence>
 
