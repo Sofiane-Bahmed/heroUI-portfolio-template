@@ -7,7 +7,8 @@ import {
     Button,
     Avatar,
     AvatarGroup,
-    Tooltip
+    Tooltip,
+    ScrollShadow
 } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
@@ -17,6 +18,7 @@ export const ProjectModal = ({ isOpen, onClose, project }) => {
     if (!project) return null;
 
     return (
+
         <Modal
             isOpen={isOpen}
             onClose={onClose}
@@ -29,45 +31,49 @@ export const ProjectModal = ({ isOpen, onClose, project }) => {
                 <ModalHeader className="text-xl font-bold text-primary-700 border-b  border-white/20">
                     {project.title}
                 </ModalHeader>
-                <ModalBody>
-                    {project.gallery && project.gallery.length > 0 && (
-                        <ImageGallery images={project.gallery} />
-                    )}
+                <ScrollShadow
+                    hideScrollBar
+                    size={60}
+                >
+                    <ModalBody>
+                        {project.gallery && project.gallery.length > 0 && (
+                            <ImageGallery images={project.gallery} />
+                        )}
 
-                    <p className="text-sm text-primary-500 mb-3 font-medium uppercase tracking-wide">
-                        {project.category}
-                    </p>
+                        <p className="text-sm text-primary-500 mb-3 font-medium uppercase tracking-wide">
+                            {project.category}
+                        </p>
 
-                    <div className="text-foreground-600 leading-relaxed mb-6 whitespace-pre-line">
-                        {project.details}
-                    </div>
-                    {project.tech && (
-                        <div className="mb-6">
-                            <h4 className="font-semibold mb-6 text-foreground">
-                                Technologies Used:
-                            </h4>
-                            <AvatarGroup >
-                                {project.tech.map(({ name, icon }) => (
-                                    <Tooltip
-                                        key={name}
-                                        content={name}
-                                        showArrow={true}>
-                                        <Avatar
-                                            key={name}
-                                            icon={<Icon icon={icon} width={25} />}
-                                            classNames={{
-                                                base: "bg-transparent",
-                                                icon: "text-foreground dark:text-foreground-dark"
-                                            }}
-                                            showFallback
-                                        />
-                                    </Tooltip>
-                                ))}
-                            </AvatarGroup>
+                        <div className="text-foreground-600 leading-relaxed mb-6 whitespace-pre-line">
+                            {project.details}
                         </div>
-                    )}
-                </ModalBody>
-
+                        {project.tech && (
+                            <div className="mb-6">
+                                <h4 className="font-semibold mb-6 text-foreground">
+                                    Technologies Used:
+                                </h4>
+                                <AvatarGroup >
+                                    {project.tech.map(({ name, icon }) => (
+                                        <Tooltip
+                                            key={name}
+                                            content={name}
+                                            showArrow={true}>
+                                            <Avatar
+                                                key={name}
+                                                icon={<Icon icon={icon} width={25} />}
+                                                classNames={{
+                                                    base: "bg-transparent",
+                                                    icon: "text-foreground dark:text-foreground-dark"
+                                                }}
+                                                showFallback
+                                            />
+                                        </Tooltip>
+                                    ))}
+                                </AvatarGroup>
+                            </div>
+                        )}
+                    </ModalBody>
+                </ScrollShadow>
                 {(project.github || project.live) && (
                     <div className="flex justify-end mb-4 px-6 gap-3">
                         {project.github && (
@@ -107,5 +113,6 @@ export const ProjectModal = ({ isOpen, onClose, project }) => {
                 </ModalFooter>
             </ModalContent>
         </Modal>
+
     );
 };

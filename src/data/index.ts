@@ -2,7 +2,7 @@ export const DATA = {
     home: {
         hero: {
             name: "Sofiane Bahmed",
-            title: "Frontend Developer & UI/UX Designer",
+            title: "Full stack developer & UI/UX Designer",
             subtitle: "I build fast, accessible and visually engaging web experiences.",
             downloadCV: "/new CV.pdf"
         },
@@ -96,7 +96,7 @@ export const DATA = {
         profile: {
             name: "Sofiane Bahmed",
             title: "Full Stack Developer",
-            image: "https://i.pravatar.cc/300?u=elhocine-sofiane",
+            image: "https://res.cloudinary.com/devq06psf/image/upload/v1750626859/chic_soba_apc1ht.png",
             description: [
                 "I'm a creative full-stack developer with a passion for UI/UX design and clean code. I focus on building beautiful, functional, and high-performance websites and web apps.",
                 "My approach is both technical and aesthetic — I enjoy turning complex problems into elegant user experiences. I work primarily with modern frameworks like React, Vite, and TailwindCSS.",

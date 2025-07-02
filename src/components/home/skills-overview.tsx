@@ -8,6 +8,7 @@ import { DATA } from "../../data";
 export const SkillsOverviewSection = () => {
   const overview = DATA.home.skills.overview;
   const { sectionTitle, sectionDescription } = DATA.home.skills
+
   return (
     <section className="py-20 bg-content1">
       <div className="container mx-auto px-4">
@@ -19,8 +20,9 @@ export const SkillsOverviewSection = () => {
           className="text-center mb-16"
         >
           <GradientText
-            className="text-3xl md:text-4xl font-bold mb-4"
-            text={sectionTitle} />
+            className="text-3xl md:text-4xl font-bold mb-4 gradient"
+            text={sectionTitle}
+          />
           <p className="text-foreground-600 text-lg max-w-2xl mx-auto">
             {sectionDescription}
           </p>
@@ -35,7 +37,7 @@ export const SkillsOverviewSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
             >
-              <Card className="border-none shadow-md">
+              <Card className="border-none shadow-md ">
                 <CardBody className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`p-3 rounded-full bg-${skill.color}-100`}>

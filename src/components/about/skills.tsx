@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import { Accordion, AccordionItem } from "@heroui/react"
-    ;
+import { Accordion, AccordionItem } from "@heroui/react";
+
 import { OrbitingCircles } from "../orbiting-circles";
 import { SectionHeader } from "./section-header";
 import { capitalize } from "../../lib/utils";

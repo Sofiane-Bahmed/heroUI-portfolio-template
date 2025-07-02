@@ -18,7 +18,7 @@ export const ProfileCard = ({ image, name, title, description }: ProfileCardProp
                     <CardFooter className="absolute bg-black/50 bottom-0 z-10 border-t border-white/20">
                         <div className="flex flex-col text-white">
                             <HighlightText
-                                className="text-lg font-semibold text-white"
+                                className="text-lg font-semibold "
                                 text={name}
                             />
                             <p className="text-sm text-white/80">{title}</p>
